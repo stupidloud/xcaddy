@@ -30,7 +30,13 @@ jobs:
         export GOARCH=amd64
         export GOOS=linux
         ./xcaddy build \
-          --with github.com/mholt/caddy-webdav
+          --with github.com/mholt/caddy-webdav \
+          --with github.com/caddy-dns/he \
+          --with github.com/caddy-dns/cloudflare \
+          --with github.com/ueffel/caddy-brotli \
+          --with github.com/WeidiDeng/caddy-cloudflare-ip \
+          --with github.com/kirsch33/realip \
+          --with github.com/caddyserver/cache-handler
 
     - name: upload
       uses: actions/upload-artifact@master
