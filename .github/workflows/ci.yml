@@ -30,7 +30,6 @@ jobs:
         export GOARCH=amd64
         export GOOS=linux
         ./xcaddy build \
-          --with github.com/devetek/caddyserver-minifier \
           --with github.com/mholt/caddy-webdav \
           --with github.com/caddy-dns/he \
           --with github.com/caddy-dns/cloudflare \
