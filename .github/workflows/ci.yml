@@ -30,6 +30,7 @@ jobs:
         export GOARCH=amd64
         export GOOS=linux
         ./xcaddy build \
+          --with github.com/devetek/caddyserver-minifier \
           --with github.com/mholt/caddy-webdav \
           --with github.com/caddy-dns/he \
           --with github.com/caddy-dns/cloudflare \
@@ -37,8 +38,7 @@ jobs:
           --with github.com/WeidiDeng/caddy-cloudflare-ip \
           --with github.com/kirsch33/realip \
           --with github.com/darkweak/souin/plugins/caddy \
-          --with github.com/darkweak/storages/badger/caddy \
-          --with github.com/devetek/caddyserver-minifier
+          --with github.com/darkweak/storages/badger/caddy
 
     - name: upload
       uses: actions/upload-artifact@master
